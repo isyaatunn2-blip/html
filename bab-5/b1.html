@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo CSS B.1 - B.4 (Merah Tua)</title>
+  <link rel="stylesheet" href="b1.css">
+</head>
+<body>
+
+  <!-- B.3 Fixed Navbar -->
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Fitur</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Container Utama -->
+  <main style="margin-top: 80px; padding: 20px;">
+
+    <!-- B.1 Box Model & Border Examples -->
+    <section>
+      <h2>B.1 CSS Box Model</h2>
+      
+      <div class="kotak">
+        <p>Kotak standar dengan padding, border merah tua, dan margin center.</p>
+      </div>
+
+      <div class="kotak-border-variasi" style="padding: 15px; margin: 15px 0;">
+        <p>Kotak dengan variasi border (atas tebal terang, bawah putus-putus).</p>
+      </div>
+
+      <div class="kotak-lingkaran" style="background-color: #800000;"></div>
+    </section>
+
+    <!-- B.3 Sticky Header -->
+    <div class="section-header">
+      <h2>Judul Sticky (Menempel saat di-scroll)</h2>
+    </div>
+
+    <!-- B.3 Position Relative & Absolute -->
+    <section>
+      <h2>B.3 Position</h2>
+      
+      <div class="kotak-relative" style="background: #f0f0f0; padding: 10px;">
+        Elemen ini menggunakan <code>position: relative</code> (tergeser dari posisi asal).
+      </div>
+
+      <br>
+
+      <div class="parent" style="background: #f9f9f9; border: 1px solid #ccc;">
+        <p style="padding: 10px;">Elemen Parent (Relative)</p>
+        <span class="badge">NEW</span>
+      </div>
+    </section>
+
+    <!-- B.4 Overflow -->
+    <section style="margin-top: 20px;">
+      <h2>B.4 Overflow</h2>
+      
+      <h3>1. Scroll Vertikal (Auto)</h3>
+      <div class="panel-teks">
+        <p>Ini adalah contoh area teks yang cukup panjang. Jika konten dalam kotak ini melebihi tinggi maksimum (200px), browser akan secara otomatis menampilkan scrollbar vertikal di sebelah kanan sehingga pengguna tetap dapat membaca keseluruhan isi teks tanpa merusak layout luar.</p>
+        <p>Teks tambahan untuk memicu scrollbar...</p>
+        <p>Teks tambahan untuk memicu scrollbar...</p>
+      </div>
+
+      <br>
+
+      <h3>2. Text Ellipsis</h3>
+      <div class="judul-kartu" style="border: 1px solid #800000; padding: 8px;">
+        Judul Berita Yang Sangat Panjang Dan Akan Terpotong Secara Otomatis
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* ==========================================
+   CSS LAYOUT & BOX MODEL (B.1 - B.4)
+   Tema Warna: Merah Tua (Burgundy / Maroon)
+   ========================================== */
+
+/* ------------------------------------------
+   1. RESET & BOX-SIZING (B.1)
+   ------------------------------------------ */
+/* Diterapkan di awal file CSS agar ukuran width/height 
+   sudah memperhitungkan padding & border */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------------------
+   2. BOX MODEL & BORDER EXAMPLES (B.1)
+   ------------------------------------------ */
+/* Pengaturan Box Model Dasar */
+.kotak {
+  /* Content */
+  width: 300px;
+  height: 150px;
+  
+  /* Padding: shorthand (atas-bawah 20px | kiri-kanan 30px) */
+  padding: 20px 30px;
+  
+  /* Border: ketebalan | jenis | warna (Merah Tua) */
+  border: 3px solid #800000;
+  border-radius: 8px;
+  
+  /* Margin: atas-bawah 20px | kiri-kanan auto (tengah) */
+  margin: 20px auto;
+}
+
+/* Contoh Variasi Border Lengkap */
+.kotak-border-variasi {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #800000;
+  
+  /* Shorthand */
+  border: 2px solid #800000;
+  
+  /* Sisi Spesifik */
+  border-top: 4px solid #A52A2A;    /* Merah Tua Terang */
+  border-bottom: 1px dashed #B22222; /* Merah Bata Tua */
+  
+  /* Variasi Sudut Membulat */
+  border-radius: 10px 0 10px 0;      /* Atas-kiri, atas-kanan, bawah-kanan, bawah-kiri */
+}
+
+.kotak-lingkaran {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;                /* Lingkaran Penuh */
+}
+
+/* ------------------------------------------
+   3. PROPERTI DISPLAY (B.2)
+   ------------------------------------------ */
+/* Mengubah <a> (inline default) menjadi block */
+nav a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #800000;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Mengubah <li> (block default) menjadi inline-block */
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Menyembunyikan Elemen */
+.tersembunyi { 
+  display: none;        /* Hilang sepenuhnya dari layout */
+}
+
+.transparan { 
+  visibility: hidden;   /* Hilang tapi ruangnya tetap diambil */
+}
+
+/* ------------------------------------------
+   4. PROPERTI POSITION & Z-INDEX (B.3)
+   ------------------------------------------ */
+/* Position Relative */
+.kotak-relative {
+  position: relative;
+  top: 10px;            /* Geser 10px ke bawah dari posisi asli */
+  left: 20px;           /* Geser 20px ke kanan dari posisi asli */
+}
+
+/* Position Absolute (Gantung terhadap parent) */
+.parent {
+  position: relative;   /* Acuan bagi elemen absolute di dalamnya */
+  width: 300px;
+  height: 200px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;          /* Menempel di pojok kanan atas parent */
+  background-color: #800000;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 4px 8px;
+}
+
+/* Position Fixed (Menempel pada layar) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #800000;
+  z-index: 100;         /* Memastikan berada di tumpukan paling atas */
+}
+
+/* Position Sticky (Menempel saat di-scroll) */
+.section-header {
+  position: sticky;
+  top: 60px;            /* Menempel saat mencapai 60px dari atas viewport */
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+/* ------------------------------------------
+   5. PROPERTI OVERFLOW (B.4)
+   ------------------------------------------ */
+/* Overflow Scroll / Auto pada Konten Panjang */
+.panel-teks {
+  width: 100%;
+  height: 200px;
+  overflow-y: auto;     /* Scrollbar vertikal otomatis jika konten meluber */
+  overflow-x: hidden;   /* Sembunyikan overflow horizontal */
+  border: 1px solid #800000;
+  padding: 16px;
+}
+
+/* Pemotongan Teks Satu Baris dengan Elipsis (...) */
+.judul-kartu {
+  white-space: nowrap;  /* Teks tidak melipat ke baris baru */
+  overflow: hidden;     /* Sembunyikan teks yang meluber */
+  text-overflow: ellipsis; /* Mengganti teks yang terpotong dengan '...' */
+  max-width: 200px;
+}
