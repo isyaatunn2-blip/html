@@ -1,0 +1,163 @@
+/* ===== LANGKAH 2: RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Agar padding tidak menambah lebar elemen */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #502c40b6;
+  background-color: #f4f2f3;
+}
+
+/* ===== SELECTOR ELEMEN ===== */
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #761a36;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #f1aeb4;
+  padding-bottom: 6px;
+}
+
+p {
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+code {
+  background-color: #fbebec;
+  color: #761a1a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+/* ===== LANGKAH 3: HEADER, KARTU, DAN CLASS ===== */
+/* ===== SELECTOR ID Header ===== */
+#site-header {
+  background: linear-gradient(135deg, #761a26, #c12e2e);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#site-header p {
+  color: #f1aeae;
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+/* ===== SELECTOR ID Footer ===== */
+#site-footer {
+  background-color: #502c2c;
+  color: #c7bdbd;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* ===== SELECTOR CLASS Layout ===== */
+.konten-utama {
+  max-width: 900px;
+  margin: 30px auto; /* Rata tengah secara horizontal */
+  padding: 0 20px;
+}
+
+.kartu {
+  background-color: white;
+  border: 1px solid #c7bdbd;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Class ganda: kartu.highlight — elemen yang punya KEDUA class */
+.kartu.highlight {
+  border-left: 5px solid #d40d0d;
+  background-color: #fee7e7;
+}
+
+/* ===== LANGKAH 4: PROPERTI TEKS & BACKGROUND ===== */
+/* ===== PROPERTI TEKS ===== */
+.teks-kecil {
+  font-size: 0.85rem;
+  color: #8d7f80;
+  font-style: italic;
+}
+
+.teks-besar {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #761a29;
+}
+
+.teks-bayangan {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c12e2e;
+  text-shadow: 2px 2px 0px rgba(26, 82, 118, 0.3);
+}
+
+.teks-kapital {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  color: #ca1e1e;
+}
+
+/* ===== BACKGROUND ===== */
+#demo-warna {
+  background-color: #fbebeb;
+  border-color: #c12e5a;
+}
+
+.demo-bg {
+  background: linear-gradient(120deg, #761a1a, #c12e4e, #f1aeae);
+  color: white;
+  border: none;
+}
+
+.demo-bg h2 {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+.demo-bg p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== LANGKAH 5: BEREKSPERIMEN DENGAN SELECTOR ===== */
+/* Grouping selector */
+h1, h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Descendant selector: <p> di dalam kartu.highlight */
+.kartu.highlight p {
+  color: #7d0812;
+}
+
+/* Pseudo-class: saat elemen kartu di-hover */
+.kartu:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease; 
+}
+
+/* Universal selector jarang digunakan selain untuk reset */
+/* * { outline: 1px solid red; } */ /* Aktifkan untuk debug layout */      
